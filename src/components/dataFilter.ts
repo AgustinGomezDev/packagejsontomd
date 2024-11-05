@@ -2,14 +2,14 @@ const dataFilter = (markdown: string) => {
     let parsedData;
     let markdownOutput = "";
     parsedData = JSON.parse(markdown);
-    
+
     markdownOutput = `
 # ${parsedData.name ? parsedData.name : 'Project name'}
 ${parsedData.description ? parsedData.description : 'No description available.'}
 
-🚀 [Demo](www.example.com)
+🚀 [Demo](https://www.example.com)
 
-### 🤔 How to use
+### 🛠️ Installation
 
 \`\`\`js
 git clone https://github.com/USER_NAME/${parsedData.name}.git
