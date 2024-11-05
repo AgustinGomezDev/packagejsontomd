@@ -1,24 +1,26 @@
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
-import rehypeRaw from 'rehype-raw'
+import rehypeRaw from 'rehype-raw';
+import dataFilter from './dataFilter';
 
 interface MdProps {
   markdown: string;
 }
 
 const Md: React.FC<MdProps> = ({ markdown }) => {
-  let parsedData;
-  let markdownOutput = ""
+  let output = ''
   try {
-    parsedData = JSON.parse(markdown);
-    markdownOutput = ``;
+    output = dataFilter(markdown)
   } catch (e) {
-    console.error('Error parsing JSON:', e);
   }
+
   return (
-    <Markdown className="prose h-[40rem] rounded-lg bg-black/30 p-6 overflow-auto markdown shadow-lg" rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
-      {markdownOutput}
+    <div className='relative h-[40rem] rounded-lg bg-black/30 p-6 overflow-auto shadow-lg'>
+      <button className='absolute top-0 right-0 m-5 text-white' onClick={() => { navigator.clipboard.writeText(output) }}>Copy</button>
+    <Markdown className="prose markdown" rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+      {output}
     </Markdown>
+    </div>
   );
 };
 

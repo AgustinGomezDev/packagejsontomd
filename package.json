@@ -1,5 +1,5 @@
 {
-  "name": "json2md",
+  "name": "packagejsontomd",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
