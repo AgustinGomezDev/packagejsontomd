@@ -2,7 +2,7 @@
 # packagejsontomd
 A tool to quickly generate a well-structured README file for your project without the need to complete forms or use lengthy editors. Just copy and paste your `package.json` to instantly create a README.
 
-🚀 [Demo](https://www.example.com)
+🚀 [Demo](https://packagejsontomd.vercel.app/)
 
 ### 🛠️ Installation
 
