@@ -5,6 +5,7 @@ interface Props {
 
 import '@fontsource-variable/onest';
 import '../globals.css'
+import Github from '../icons/Github.astro'
 const { title } = Astro.props;
 ---
 
@@ -19,7 +20,10 @@ const { title } = Astro.props;
 		<meta name="description" content="Easily transform your package.json file into structured documentation in Markdown format. Upload your file or paste the content to get ready-to-use documentation with JSON2MD.">
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="relative">
+		<a href="https://github.com/AgustinGomezDev/packagejsontomd" target="_blank" class="cursor-pointer">
+			<Github class="bg-gray-700 hover:bg-gray-800 transition-colors absolute right-0 -mt-5 md:-mt-10 text-white size-8 p-4 rounded-bl-lg box-content" />
+		</a>
 		<slot />
 	</body>
 </html>
