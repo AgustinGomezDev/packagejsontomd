@@ -8,6 +8,10 @@ html {
         color: white;
     }
 
+    p code {
+        color: white
+    }
+
     table{
         border-spacing: 0;
         border-collapse: collapse;
