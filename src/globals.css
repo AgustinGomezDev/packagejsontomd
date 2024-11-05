@@ -1,0 +1,10 @@
+html {
+    font-family: 'Onest Variable', sans-serif;
+    background: rgb(20, 21, 29);
+}
+
+.markdown{
+    h1, h2, h3, h4, h5, h6, p, span, ul , li, a, strong{
+        color: white;
+    }
+}
